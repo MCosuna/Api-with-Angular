@@ -1,0 +1,51 @@
+
+<!-- routerlinks, donde queremos insertar el menu de navegacióm -->
+<div class="container bg-dark">
+ <br> <h1 class="text-light">Api News!</h1>
+ <h4 class="text-light"> selecciona categoría </h4> 
+   
+  <select class="browser-default custom-select"  matNativeControl  required [(ngModel)]="categoria"> 
+    <option selected="true" disabled="disabled" selected>categoria</option>
+     <option  value = "general" required> general</option > 
+     <option  value = "sports" > sports </option > 
+     <option  value = "health" >health </option > 
+   </select > 
+<br>
+   <div class="card-columns">    
+    <div class='col-10' *ngFor="let l of lista">
+          <div class='card text-white bg-dark mb-4 rounded-0'>
+            <h3 style="padding: 5px;">{{l.title}}</h3>
+            <div class='card-body rounded-0'>
+              <img class="card-img-top" src="{{l.urlToImage}}" alt="Card image cap">
+              <h5 class='card-title'>{{l.title}}</h5>
+              <p class='card-text mt-3'>{{l.content}} {{l.description}}  {{l.author}}</p>
+              <a href="{{l.url}}" class="btn btn-primary">go to video</a>
+            </div>
+          </div>
+        </div> 
+
+  <!-- <div *ngFor="let l of lista" class="card bg-dark text-light border border-warning" style="width: 70rem;">
+    <img class="card-img-top" src="{{l.urlToImage}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{l.title}} </h5>
+      <p class="card-text">{{l.content}} {{l.description}}  {{l.author}}</p>
+      <a href="{{l.url}}" class="btn btn-primary">go to video</a>
+    </div>
+  </div><br> -->
+
+
+  <button class="btn btn-outline-primary"><a routerLink="/">volver</a>
+  </button>
+  <button class="btn btn-primary btn-block" (click)="peticion()">go to news!</button>
+  <style>
+    #card{
+      /* margin-top; */
+      padding: 5px;
+      margin-bottom: 5px;
+      height: 100%;
+      width: 10px;
+
+    }
+  </style>
+</div>
+

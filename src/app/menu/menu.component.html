@@ -1,0 +1,62 @@
+<!-- <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>my-app</span>
+    </mat-toolbar>
+  Add Content Here -->
+  <!-- </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<!-- <div id="demo" class="carousel slide" data-ride="carousel"> -->
+  <!-- The slideshow -->
+  <!-- <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://profile.es/pro/wp-content/media/directivas-de-angular-programaci%C3%B3n.jpg" alt="Los Angeles">
+    </div>
+  </div> -->
+  <div class="jumbotron">
+    <h2>Api Angular</h2>   
+    <div class="input-group">
+      <input required type="text" class="form-control" [(ngModel)]="ciudad"  placeholder="Escribe tu ciudad..." >
+      <span class="btn btn-info input-group-addon " (click)="peticion(ciudad)" (ngModelChange)="peticion(ciudad)">consultar</span>
+    </div>
+    <!-- <input type="text" [(ngModel)]="ciudad"  > -->
+    
+    <div class="card-columns"> 
+      <div class='col-10' *ngFor="let l of todo">
+            <div class='card text-white bg-dark mb-4'>
+              <div class='card-body'>
+                <img class="card-img-top" src="https://s6.eestatic.com/2019/03/07/ciencia/meteorologia/Meteorologia-AEMET-Temperaturas-Invierno-Meteorologia_381472764_117233610_1024x576.jpg" alt="Card image">
+                <h5 class='card-title'>{{l.main}}</h5>
+                <p class='card-text mt-3'>{{l.description}} <img name="img" src="{{l.icon}}.png"></p>
+              </div>
+            </div>
+          </div>
+          <!-- <button (click)="peticion(ciudad)" (ngModelChange)="peticion(ciudad)">eeeee</button>   -->
+        </div> 
+
+<style>
+  #card{
+    border-radius:0 0 inherit inherit
+
+  }
+</style>

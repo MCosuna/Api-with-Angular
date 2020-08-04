@@ -1,0 +1,8 @@
+.activo {
+    background-color: green;  
+  }
+  .activo a {
+    color: blue;
+  }
+  /* podemos aplicar estilos a routerlinks="active", active es el nombre de la clase
+a la cual le aplicaremos los estilos */
