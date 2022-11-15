@@ -31,7 +31,7 @@ todo;
 listadetodos=[];
 
 peticion(ciudad){//realizamos una peticion, nos devolverá un array
-  this.http.get('https://api.openweathermap.org/data/2.5/weather?q='+ciudad+'&appid=8716b2bb951669006a9bb4d784230e7e').subscribe(
+  this.http.get('https://api.openweathermap.org/data/2.5/weather?q='+ciudad+'&appid=YOUR-API-KEY').subscribe(
     resultado => {
       this.todo = resultado;
       console.log(this.todo = this.todo);
